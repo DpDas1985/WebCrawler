@@ -3,6 +3,6 @@ package code.webcrawler.intf;
 import code.webcrawler.Node;
 
 public interface WebCrawlerHandlerInterface {
-	public Node getAllLinksOfCurrentURL(Node  node);
+	public Node getAllLinksOfCurrentURL(Node  node,String baseURL);
 	
 }

@@ -28,7 +28,7 @@ public class WebCrawler{
     	//Inject WebCrawlerHandler to handle the request
     	setHandler(new WebCrawlerHandler());
     	
-    	Node node =handler.getAllLinksOfCurrentURL(rootNode);
+    	Node node =handler.getAllLinksOfCurrentURL(rootNode,baseURL);
     	writeFinalOutputIntoFile(node);
 		
     	return "success";

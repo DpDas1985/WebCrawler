@@ -29,10 +29,10 @@ public class WebCrawlerHandler implements WebCrawlerHandlerInterface{
     }
     
     
-	 public Node getAllLinksOfCurrentURL(Node node) {
+	 public Node getAllLinksOfCurrentURL(Node node,String baseURL) {
 	       
 		
-		 if (!node.getUrl().trim().isEmpty() && !links.contains(node.getUrl()) && node.getUrl().contains("https://wiprodigital.com")) {
+		 if (!node.getUrl().trim().isEmpty() && !links.contains(node.getUrl()) && node.getUrl().contains(baseURL)) {
 	         
 			 try {
 	                links.add(node.getUrl().trim());
@@ -50,7 +50,7 @@ public class WebCrawlerHandler implements WebCrawlerHandlerInterface{
 	     	            }
 	                	 Node childNode = new Node(childURL, null);
 	                
-	                	node.getChildNode().add(getAllLinksOfCurrentURL(childNode));
+	                	node.getChildNode().add(getAllLinksOfCurrentURL(childNode,baseURL));
 	                	
 	                }
 	            } catch (IOException e) {
