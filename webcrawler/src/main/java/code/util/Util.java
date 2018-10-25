@@ -13,7 +13,7 @@ public class Util {
 	 */
 	public static String getDomain(String url) {
 		 	String domain="";
-			Pattern pattern = Pattern.compile("(http?://)([^:^/]*)(:\\d*)?(.*)?");
+			Pattern pattern = Pattern.compile("(https?://)([^:^/]*)(:\\d*)?(.*)?");
 			Matcher matcher = pattern.matcher(url);
 		 try {
 		
@@ -21,7 +21,7 @@ public class Util {
 			matcher.find();
 			//return domain name
 			domain = matcher.group(2);
-			
+		
 		 }catch(Exception e) {
 			// System.out.println("Invalid URL"+url);
 			 
