@@ -30,8 +30,9 @@ public class WebCrawlerTest {
 	@Test
 	public void testPrintHelloWorld() throws IOException {
 		WebCrawler webCrawler = new WebCrawler();
-
-		Assert.assertEquals(webCrawler.doWebCrawl("https://wiprodigital.com"), "success");
+		//input 1:URL
+		//input 2: if other domain are applicable then true or else false
+		Assert.assertEquals(webCrawler.doWebCrawl("http://wiprodigital.com",false), "success");
 
 	}
 	
